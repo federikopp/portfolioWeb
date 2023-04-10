@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AcercaDeService } from 'src/app/service/acerca-de.service';
+//import { AcercaDeService } from 'src/app/service/acerca-de.service';
 
 @Component({
   selector: 'app-acerca-de',
