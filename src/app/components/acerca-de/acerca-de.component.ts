@@ -7,7 +7,7 @@ import { AcercaDeService } from 'src/app/service/acerca-de.service';
   styleUrls: ['./acerca-de.component.css']
 })
 
-export class AcercaDeComponent implements OnInit {
+export class AcercaDeComponent  {}/*implements OnInit {
 
   AcercaDe: any;
 
@@ -18,4 +18,4 @@ export class AcercaDeComponent implements OnInit {
       this.acercaDeService = data;
     });
   }
-}
+}*/
