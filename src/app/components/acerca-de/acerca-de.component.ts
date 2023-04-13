@@ -1,21 +1,27 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-//import { AcercaDeService } from 'src/app/service/acerca-de.service';
-
+import { AcercaDe } from 'src/app/model/acercaDe'
+import { AcercaDeService } from 'src/app/service/acerca-de.service';
 @Component({
   selector: 'app-acerca-de',
   templateUrl: './acerca-de.component.html',
   styleUrls: ['./acerca-de.component.css']
 })
 
-export class AcercaDeComponent  {}/*implements OnInit {
+export class AcercaDeComponent implements OnInit {
 
-  AcercaDe: any;
+  public acercaDe: AcercaDe | undefined 
 
-  constructor(private acercaDeService: AcercaDeService) { }
+  constructor(public acercaDeService: AcercaDeService){}
 
-  ngOnInit(): void {
-    this.acercaDeService.getAcercaDe().subscribe(data => {
-      this.acercaDeService = data;
-    });
+  ngOnInit(): void  {
+    this.acercaDeService.getPersona().subscribe({
+      next: (response: AcercaDe) => {
+        this.acercaDe = response;
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
   }
-}*/
+}

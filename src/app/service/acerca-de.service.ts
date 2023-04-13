@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/*import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -13,4 +13,21 @@ export class AcercaDeService {
     return this.http.get<any>('')
   }
 
+}*/
+
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { AcercaDe } from '../model/acercaDe';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AcercaDeService {
+
+  constructor(private http:HttpClient) { }
+
+  public getPersona():Observable<AcercaDe> { 
+    return this.http.get<AcercaDe>('src/assets/json/acercaDe.json');
+  }
 }

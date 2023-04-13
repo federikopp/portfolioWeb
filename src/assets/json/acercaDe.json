@@ -1,5 +1,5 @@
 {
-    
+    "id": 1,
     "nombre":"Federico",
     "apellido":"Kopp",
     "titulo":"Full Stack Developer Jr.",
@@ -7,6 +7,6 @@
     "edad":"34",
     "email":"kopp.luis@gmail.com",
     "contacto":"+54 2914764250",
-    "imagen":"url://"
+    "imagen":"src/assets/img/perfil.jpg"
 
 },
