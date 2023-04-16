@@ -2,35 +2,41 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { TopMenuComponent } from './components/top-menu/top-menu.component';
-import { HeaderComponent } from './components/header/header.component';
-import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
-import { EducacionComponent } from './components/educacion/educacion.component';
-import { ExpLaboralComponent } from './components/exp-laboral/exp-laboral.component';
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft-skills.component';
+import { TopMenuComponent } from './components/home/top-menu/top-menu.component';
+import { HeaderComponent } from './components/home/header/header.component';
+import { AcercaDeComponent } from './components/home/acerca-de/acerca-de.component';
+import { EducacionComponent } from './components/home/educacion/educacion.component';
+import { ExpLaboralComponent } from './components/home/exp-laboral/exp-laboral.component';
+import { ProyectosComponent } from './components/home/proyectos/proyectos.component';
+import { FooterComponent } from './components/home/footer/footer.component';
+import { HardSoftSkillsComponent } from './components/home/hard-soft-skills/hard-soft-skills.component';
 import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TopMenuComponent,
-    HeaderComponent,
-    AcercaDeComponent,
-    EducacionComponent,
-    ExpLaboralComponent,
-    ProyectosComponent,
-    FooterComponent,
-    HardSoftSkillsComponent,
-    LoginComponent
+    AppComponent ,
+    TopMenuComponent ,
+    HeaderComponent ,
+    AcercaDeComponent ,
+    EducacionComponent ,
+    ExpLaboralComponent ,
+    ProyectosComponent ,
+    FooterComponent ,
+    HardSoftSkillsComponent ,
+    LoginComponent ,
+    HomeComponent
   ],
+  
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
