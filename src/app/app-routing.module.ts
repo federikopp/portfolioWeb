@@ -13,13 +13,13 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
 
-  { path: 'components', component: AppComponent },
-  { path: '', component: HomeComponent },
+  { path: '', component: AppComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'header', component: HeaderComponent },
   { path: 'acercaDe', component: AcercaDeComponent },
-  { path: 'expLaboral', component: ExpLaboralComponent },
+  { path: 'experiencias', component: ExpLaboralComponent },
   { path: 'educacion', component: EducacionComponent },
-  { path: 'hysskills', component: HardSoftSkillsComponent },
+  { path: 'skills', component: HardSoftSkillsComponent },
   { path: 'proyectos', component: ProyectosComponent },
   { path: 'footer', component: FooterComponent }
 
@@ -30,4 +30,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule { }
+export class AppRoutingModule {}

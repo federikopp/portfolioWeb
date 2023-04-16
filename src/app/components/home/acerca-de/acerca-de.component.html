@@ -4,17 +4,17 @@
     <div class="row align-items-center g-5 py-5">
 
         <div class="left-aligned col-10 col-sm-8 col-lg-6">
-            <img id="imgPerfil" src="../../../../assets/img/perfil.jpg" class="img-fluid rounded-3" alt="FedeKopp">
+            <img id="imgPerfil" src= "{{acercaDe.imagen}}" class="img-fluid rounded-3" alt="FedeKopp">
         </div>
 
         <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">{{acercaDe?.nombre}} {{acercaDe?.apellido}} </h1>
-            <h2>Full Stack Developer Jr.</h2>
-            <p class="lead">Nacionalidad: Argentino</p>
-            <p class="lead">Fecha de Nacimiento: 01/05/88</p>
-            <p class="lead">Años: 34</p>
-            <p class="lead">Mail: kopp.luisd@gmail.com</p>
-            <p class="lead">Contacto: +54 2915764250</p>
+            <h1 class="display-5 fw-bold lh-1 mb-3">{{acercaDe.nombre}} {{acercaDe.apellido}}</h1>
+            <h2>{{acercaDe.titulo}}</h2>
+            <p class="lead">Nacionalidad: {{acercaDe.nacionalidad}}</p>
+            <p class="lead">Fecha de Nacimiento: {{acercaDe.fechaNac}}</p>
+            <p class="lead">Años: {{acercaDe.edad}}</p>
+            <p class="lead">Mail: {{acercaDe.email}}</p>
+            <p class="lead">Contacto: {{acercaDe.contacto}}</p>
         </div>
 
     </div>

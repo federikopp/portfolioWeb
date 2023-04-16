@@ -11,11 +11,12 @@ import { EducacionComponent } from './components/home/educacion/educacion.compon
 import { ExpLaboralComponent } from './components/home/exp-laboral/exp-laboral.component';
 import { ProyectosComponent } from './components/home/proyectos/proyectos.component';
 import { FooterComponent } from './components/home/footer/footer.component';
-import { HardSoftSkillsComponent } from './components/home/hard-soft-skills/hard-soft-skills.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { HardSoftSkillsComponent } from './components/home/hard-soft-skills/hard-soft-skills.component';
 
 @NgModule({
+  
   declarations: [
     AppComponent ,
     TopMenuComponent ,
@@ -32,7 +33,7 @@ import { HomeComponent } from './components/home/home.component';
   
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   
   providers: [],

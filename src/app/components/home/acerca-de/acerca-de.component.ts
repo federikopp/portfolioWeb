@@ -1,6 +1,6 @@
-import { HttpErrorResponse } from '@angular/common/http';
+//import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { AcercaDe } from 'src/app/model/acercaDe'
+//import { AcercaDe } from 'src/app/model/acercaDe'
 import { AcercaDeService } from 'src/app/service/acerca-de.service';
 @Component({
   selector: 'app-acerca-de',
@@ -10,18 +10,12 @@ import { AcercaDeService } from 'src/app/service/acerca-de.service';
 
 export class AcercaDeComponent implements OnInit {
 
-  public acercaDe: AcercaDe | undefined 
+  acercaDe: any; 
 
   constructor(public acercaDeService: AcercaDeService){}
 
   ngOnInit(): void  {
-    this.acercaDeService.getPersona().subscribe({
-      next: (response: AcercaDe) => {
-        this.acercaDe = response;
-      },
-      error:(error:HttpErrorResponse)=>{
-        alert(error.message);
-      }
-    })
+    this.acercaDeService.getPersona()
+    .subscribe(data => this.acercaDe = data);
   }
 }
