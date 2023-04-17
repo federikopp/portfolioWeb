@@ -4,10 +4,10 @@
     "apellido":"Kopp",
     "titulo":"Full Stack Developer Jr.",
     "nacionalidad":"Argentino",
-    "fechaNac": "1988-05-01",
+    "fechaNac": "01/05/1988",
     "edad":"34",
     "email":"kopp.luis@gmail.com",
     "contacto":"+54 2914764250",
-    "imagen":"src/assets/img/perfil.jpg"
+    "imagen":"../assets/img/perfil.jpg"
 
 }

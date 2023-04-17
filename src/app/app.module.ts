@@ -14,6 +14,7 @@ import { FooterComponent } from './components/home/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { HardSoftSkillsComponent } from './components/home/hard-soft-skills/hard-soft-skills.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   
@@ -33,7 +34,8 @@ import { HardSoftSkillsComponent } from './components/home/hard-soft-skills/hard
   
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   
   providers: [],
