@@ -1,12 +1,32 @@
 export class AcercaDe{
 
-    id:number | undefined;
-    nombre:string | undefined;
-    apellido:string | undefined;
-    nacionalidad:string | undefined;
-    titulo:string | undefined;
-    edad:number | undefined;
-    email:string | undefined;
-    contacto:string | undefined;
-    fotoPerfil:string | undefined;
+    id?: number;
+    nombre: string;
+    apellido: string;
+    nacionalidad :string;
+    titulo: string;
+    edad: number;
+    email: string;
+    contacto: string;
+    fotoPerfil: string;
+
+    constructor (nombre: string, 
+                apellido: string,
+                nacionalidad: string,
+                titulo: string,
+                edad: number,
+                email: string,
+                contacto: string,
+                fotoPerfil: string){
+
+                    this.nombre = nombre;
+                    this.apellido = apellido;
+                    this.nacionalidad = nacionalidad;
+                    this.titulo = titulo;
+                    this.edad = edad;
+                    this.email = email;
+                    this.contacto = contacto;
+                    this.fotoPerfil = fotoPerfil;
+
+                }
 }
