@@ -3,14 +3,21 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AcercaDe } from '../model/acercaDe';
-import { Environment } from 'src/environments/environment';
+//import { Environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AcercaDeService {
+  private apiUrl = '../assets/json/acercaDe.json'
+  
 
-  URL = Environment.URL + '/acercaDe/';
+  constructor(private http:HttpClient) { }
+
+  public getPersonaLista():Observable<AcercaDe[]> { 
+    return this.http.get<AcercaDe[]>(this.apiUrl);
+  };
+  /*URL = Environment.URL + '/acercaDe/';
   constructor(private http:HttpClient) { }
 
    public getPersonaLista():Observable<AcercaDe[]> { 
@@ -31,6 +38,6 @@ export class AcercaDeService {
 
   public borrar(id: number): Observable<any>{
     return this.http.delete<any>(this.URL+`borrar/${id}`);
-  }
+  }*/
 
 }

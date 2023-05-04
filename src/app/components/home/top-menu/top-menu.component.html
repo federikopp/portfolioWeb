@@ -48,7 +48,8 @@
       </li>
 
       <li class="nav-item">
-        <button routerLink="/login" type="button" class="btn btn-info">Login</button>
+        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!log">ENTRAR</button>
+        <button type="button" class="btn btn-outline-light" (click)="onLogout()" *ngIf="log">CERRAR SESIÓN</button>
       </li>
     </ul>
   </div>

@@ -1,4 +1,4 @@
-<div class="container">
+<!--  <div class="container">
     <h1>Iniciar Sesión</h1>
     <form>
       <div class="form-group">
@@ -11,4 +11,33 @@
       </div>
       <button routerLink="" type="submit" class="btn btn-primary">Enviar</button>
     </form>
-  </div>
+  </div>  -->
+
+<section class="form-signin w-100 m-auto justify-content-md-center">
+  <form (ngSubmit)="submit()" novalidate>
+    <img class="mb-4" src="../assets/img/APLogo-20-20.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Ingrese Usuario y Contraseña</h1>
+
+    <!-- <div class="form-floating">
+      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+      <label for="email">Direccion Email</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" placeholder="Password">
+      <label for="password">Password</label>
+    </div> -->
+
+    <div class="form-outline form-white mb-4">
+      <input type="email" [(ngModel)]="email" id="email" class="form-control form-control-lg" required/>
+      <label class="form-label" for="email">Direccion Email</label>
+    </div>
+
+    <div class="form-outline form-white mb-4">
+      <input type="password" [(ngModel)]="password" id="password" class="form-control form-control-lg" required />
+      <label class="form-label" for="password">Password</label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" routerLink="" type="submit">Entrar</button>
+
+    </form>
+    <app-footer></app-footer>
+</section>

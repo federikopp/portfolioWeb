@@ -1,16 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginUsuario } from 'src/app/model/login-usuario';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  email: string = '';
-  password: string = '';
+export class LoginComponent implements OnInit  {
+  email!: string;
+  password!: string;
+  loginUsuario!: LoginUsuario;
 
-  onSubmit() {
-    console.log(this.email, this.password);
-    // Aquí se puede hacer la lógica para enviar los datos de inicio de sesión a una API
+  constructor (loginUsuario: LoginUsuario) {
+    this.email = loginUsuario.email;
+    this.password = loginUsuario.password;
   }
+    
+  
+  ngOnInit() {
+    this.loginUsuario = new LoginUsuario(this.email, this.password);
+  }
+
+  submit() {
+     
+  }
+  
 }
