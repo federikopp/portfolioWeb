@@ -1,22 +1,29 @@
 import { Injectable } from '@angular/core';
 import { LoginUsuario } from '../model/login-usuario';
+
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginUsuarioService {
-  private apiUrl = '../assets/json/login.json'
+  //private apiUrl = '../assets/json/login.json'
 
-  constructor(private http:HttpClient, loginUsuario:LoginUsuario) {
-    loginUsuario.email = this.email;
+  private credenciales = [
+    {email:'admin',password:'admin'}
+]
+
+  constructor(/*private http:HttpClient*/) {
+    
    }
 
 
-  public getLogin():Observable<LoginUsuario[]> { 
-    return this.http.get<LoginUsuario[]>(this.apiUrl);
+  public getLogin(email: string, password:string):Observable<boolean> { 
+    const credencialesValidacion = this.credenciales.find(credencial =>credencial.email === email && credencial.password === password);
+    
+    return of(credencialesValidacion ? true : false);
   };
 
   public login(){
