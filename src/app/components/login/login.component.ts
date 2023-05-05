@@ -7,7 +7,7 @@ import { LoginUsuarioService } from 'src/app/service/login-usuario.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent{
   email!: string;
   password: string='admin';
   //loginUsuario!: LoginUsuario;
@@ -16,9 +16,7 @@ export class LoginComponent implements OnInit{
 
 
   }
-  ngOnInit(): void {
-    this.email='hoal';
-  }
+
 
 
   submit(){
@@ -36,10 +34,7 @@ export class LoginComponent implements OnInit{
     
   }
 
-  otro(){
-    this.email;
-    alert(this.email);
-  }
+
 
 
     
